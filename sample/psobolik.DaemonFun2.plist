@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>psobolik.DaemonFun2</string>
+	<key>Program</key>
+	<string>/Users/psobolik/Library/Caches/AppCode2019.2/DerivedData/DaemonFun2-akabmyozrruuigcencemtjdkoepa/Build/Products/Debug/DaemonFun2</string>
+	<key>StandardOutPath</key>
+	<string>/Users/psobolik/Development/daemon-fun/DaemonFun2/out.txt</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/psobolik/Development/daemon-fun/DaemonFun2/err.txt</string>
+	<key>Sockets</key>
+	<dict>
+		<key>Daemon2Listener</key>
+		<dict>
+			<key>SockServiceName</key>
+			<integer>4000</integer>
+			<key>SockType</key>
+			<string>stream</string>
+			<key>SockNodeName</key>
+			<string>localhost</string>
+			<key>SockFamily</key>
+			<string>IPv4</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
+

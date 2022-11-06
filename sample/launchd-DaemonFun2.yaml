@@ -1,0 +1,95 @@
+# https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
+# $ man launchd.plist for details
+# plist-gen.py skips any keys that have no value
+Label: psobolik.DaemonFun2  # String (Required)
+Program: /Users/psobolik/Library/Caches/AppCode2019.2/DerivedData/DaemonFun2-akabmyozrruuigcencemtjdkoepa/Build/Products/Debug/DaemonFun2 # String (Required if no ProgramArguments)
+ProgramArguments: # Array of strings (Required if no Program)
+KeepAlive: # Boolean or dictionary of stuff
+#  SuccessfulExit: # Boolean
+#  NetworkState: # Boolean
+#  PathState: # Dictionary of booleans
+#  OtherJobEnabled: # Dictionary of booleans
+#  Crashed: # Boolean
+RunAtLoad: # Boolean
+RootDirectory: # String
+WorkingDirectory: # String
+EnvironmentVariables: # Dictionary of strings
+Umask: # Integer or string
+TimeOut: # Integer
+ExitTimeOut: # Integer
+ThrottleInterval: # Integer
+InitGroups: # Boolean
+WatchPaths: # Array of strings
+QueueDirectories: # Array of strings
+StartOnMount: # Boolean
+StartInterval: # Integer
+StartCalendarInterval: # Dictionary of integers or array of dictionaries of integers
+#  Minute: # Integer (0-59)
+#  Hour: # Integer (0-23)
+#  Day: # Integer (1-31)
+#  Weekday: # Integer (0-7)
+#  Month: # Integer (1-12)
+StandardInPath: # /dev/null # Path string
+StandardOutPath: /Users/psobolik/Development/daemon-fun/DaemonFun2/out.txt # /dev/null # Path string
+StandardErrorPath: /Users/psobolik/Development/daemon-fun/DaemonFun2/err.txt #  /dev/null # Path string
+EnableGlobbing: # Boolean
+EnableTransactions: # Boolean
+EnablePressuredExit: # Boolean
+Disabled: # Boolean
+UserName: # String
+GroupName: # String
+inetdCompatibility: # Dictionary
+LimitLoadToHosts: # Array of strings
+LimitLoadFromHosts: # Array of strings
+LimitLoadToSessionType: # String or array of strings
+LimitLoadToHardware: # Dictionary of arrays
+Debug: # Boolean
+WaitForDebugger: # Boolean
+SoftResourceLimits: # Dictionary of integers
+#  Core: # Integer
+#  CPU: # Integer
+#  Data: # Integer
+#  FileSize: # Integer
+#  MemoryLock: # Integer
+#  NumberOfFiles: # Integer
+#  NumberOfProcesses: # Integer
+#  ResidentSetSize: # Integer
+#  Stack: # Integer
+HardResourceLimits: # Dictionary of integers
+#  Core: # Integer
+#  CPU: # Integer
+#  Data: # Integer
+#  FileSize: # Integer
+#  MemoryLock: # Integer
+#  NumberOfFiles: # Integer
+#  NumberOfProcesses: # Integer
+#  ResidentSetSize: # Integer
+#  Stack: # Integer
+Nice: # Integer
+ProcessType: # String: Background, Standard, Adaptive or Interactive
+AbandonProcessGroup: # Boolean
+LowPriorityIO: # Boolean
+LowPriorityBackgroundIO: # Boolean
+MaterializeDatalessFiles: # Boolean
+LaunchOnlyOnce: # Boolean
+MachServices: # Dictionary of booleans or dictionary of dictionaries
+#  ResetAtClose: # Boolean
+#  HideUntilCheckIn: # Boolean
+Sockets: # Dictionary of dictionaries or dictionary of array of dictionaries
+  Daemon2Listener:
+    SockServiceName: 4000
+    SockType: stream
+    SockNodeName: localhost
+    SockFamily: IPv4
+#  SockPassive: # Boolean
+#  SockServiceName: # String or integer
+#  SockProtocol: # String
+#  SockPathName: # String
+#  SecureSocketWithKey: # String
+#  SockPathOwner: # Integer
+#  SockPathGroup: # Integer
+#  SockPathMode: # Integer
+#  Bonjour: # Boolean, string or array of strings
+#  MulticastGroup: # String
+LaunchEvents: # Dictionary of dictionaries of dictionaries
+SessionCreate: # Boolean
